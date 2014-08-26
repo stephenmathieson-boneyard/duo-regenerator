@@ -3,6 +3,12 @@
 
   duo es6 to es5 transform
 
+## Usage
+
+```sh
+$ duo --use duo-regenerator es6.js > es5.js
+```
+
 ## License 
 
 (The MIT License)
