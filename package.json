@@ -1,6 +1,6 @@
 {
   "name": "duo-regenerator",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "duo es6 to es5 transform",
   "keywords": [
     "duo",
