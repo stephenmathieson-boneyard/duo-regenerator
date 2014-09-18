@@ -5,12 +5,7 @@
 
 var debug = require('debug')('duo-regenerator');
 var regenerator = require('regenerator');
-
-/**
- * Generator regex.
- */
-
-var expr = /\bfunction\s*\*/;
+var containsGenerator = require('contains-generator');
 
 /**
  * Regnerator runtime.
@@ -32,7 +27,7 @@ function plugin() {
   var first = true;
   return function regenerator(file, duo) {
     if ('js' != file.type) return;
-    if (!expr.test(file.src)) return;
+    if (!containsGenerator(file.src)) return;
 
     if (first) {
       debug('adding facebook/regenerator\'s runtime');

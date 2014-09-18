@@ -14,6 +14,7 @@
     "url": "git://github.com/stephenmathieson/duo-regenerator.git"
   },
   "dependencies": {
+    "contains-generator": "0",
     "debug": "^1.0.4",
     "regenerator": "^0.6.5"
   },
