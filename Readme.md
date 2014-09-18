@@ -1,12 +1,12 @@
 
 # duo-regenerator
 
-  duo es6 to es5 transform
+  duo transform for using ES6 generators in ES5 environments
 
 ## Usage
 
 ```sh
-$ duo --use duo-regenerator es6.js > es5.js
+$ duo --use duo-regenerator file-with-generators.js > build.js
 ```
 
 ## License 
