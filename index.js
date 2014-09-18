@@ -16,7 +16,7 @@ var expr = /\bfunction\s*\*/;
  * Regnerator runtime.
  */
 
-var runtime = regenerator('', { includeRuntime: true });
+var runtime = compile('', true);
 
 /**
  * Export `plugin`.
@@ -41,14 +41,12 @@ function plugin() {
     }
 
     debug('transforming %s to ES5', file.id);
-    file.src = render(file.src);
+    file.src = 'require("regenerator-runtime");\n\n'
+             + compile(file.src);
   };
 }
 
-/**
- * Render the given `js` to ES5.
- */
-
-function render(js) {
-  return 'require("regenerator-runtime");\n\n' + regenerator(js);
+function compile(js, includeRuntime) {
+  includeRuntime = includeRuntime || false;
+  return regenerator.compile(js, { includeRuntime: includeRuntime }).code;
 }

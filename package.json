@@ -2,7 +2,12 @@
   "name": "duo-regenerator",
   "version": "0.0.0",
   "description": "duo es6 to es5 transform",
-  "keywords": [ "duo", "regenerator", "yield", "es6" ],
+  "keywords": [
+    "duo",
+    "regenerator",
+    "yield",
+    "es6"
+  ],
   "author": "Stephen Mathieson <me@stephenmathieson.com>",
   "repository": {
     "type": "git",
@@ -10,10 +15,10 @@
   },
   "dependencies": {
     "debug": "^1.0.4",
-    "regenerator": "^0.4.12"
+    "regenerator": "^0.6.5"
   },
   "devDependencies": {
-    "duo": "^0.8.1",
+    "duo": "^0.8.4",
     "mocha": "^1.21.4"
   },
   "main": "index",
